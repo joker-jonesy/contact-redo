@@ -8,7 +8,7 @@ function Contact(props){
     }
 
     return(
-        <div>
+        <div className={"card"}>
             <h1>{props.data.name}</h1>
             <p>{props.data.adr}</p>
             <div className={"contact "+returnClass()}>

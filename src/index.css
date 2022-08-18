@@ -12,6 +12,20 @@ code {
     monospace;
 }
 
+.card{
+  min-height: 100px;
+  max-width: 250px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.2) 8px 8px 8px;
+  box-sizing: border-box;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
 .contact{
   height: 80px;
   width: 200px;

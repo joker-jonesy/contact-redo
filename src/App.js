@@ -39,7 +39,11 @@ function App() {
     newList.push(newObj);
     setList(newList);
     setChange(!change);
-    console.log(list)
+    setInp("")
+  }
+
+  const handleChange =(event)=>{
+    setInp(event.target.value);
   }
 
   return (
@@ -47,6 +51,7 @@ function App() {
       {list.map(itm=>
           <Contact key={itm.id} data={itm} />
       )}
+      <input type="text" value={inp} onChange={handleChange}/>
       <button onClick={submit}>Submit</button>
     </div>
   );

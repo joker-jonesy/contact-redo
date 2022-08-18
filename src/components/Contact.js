@@ -11,7 +11,7 @@ function Contact(props){
         <div className={"card"}>
             <h1>{props.data.name}</h1>
             <p>{props.data.adr}</p>
-            <div className={"contact "+returnClass()}>
+            <div className={"contact "+returnClass()} onClick={()=>setContacted(!contacted)}>
                 {contacted ? "Has Been Contacted!": "Needs to be contacted!"}
             </div>
         </div>

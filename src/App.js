@@ -23,6 +23,11 @@ function App() {
 
   const [list, setList]=React.useState(contacts);
   const [inp, setInp]=React.useState("");
+  const [change, setChange]=React.useState(false)
+
+  React.useEffect(()=>{
+    console.log("rerender page")
+  }, [list])
 
   const submit =()=>{
     let newList =list;
@@ -32,7 +37,9 @@ function App() {
       adr: "Somewhere Somewhere Somewhere Lane"
     }
     newList.push(newObj);
-    setList(newList)
+    setList(newList);
+    setChange(!change);
+    console.log(list)
   }
 
   return (

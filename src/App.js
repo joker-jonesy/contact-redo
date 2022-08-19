@@ -46,11 +46,13 @@ function App() {
     setInp(event.target.value);
   }
 
+  let mapEles = list.map(itm=>
+      <Contact key={itm.id} data={itm} />
+  )
+
   return (
     <div className="App">
-      {list.map(itm=>
-          <Contact key={itm.id} data={itm} />
-      )}
+      {mapEles}
       <input type="text" value={inp} onChange={handleChange}/>
       <button onClick={submit}>Submit</button>
     </div>
